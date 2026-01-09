@@ -1,9 +1,11 @@
 import tkinter as tk
+import requests
 
 root = tk.Tk()
 root.title("Lamp Control")
 
 message = None  
+NODEMCU_IP = "http://192.168.4.1"
 
 def check_credentials():
     username = username_entry.get()
@@ -40,6 +42,7 @@ def open_dashboard():
     message.pack(pady=10)
 
 def toggle_on():
+    requests.get(NODEMCU_IP + "/ON")
     message.config(text="Lamp is ON", fg="green")
     print("ON button clicked")
 
