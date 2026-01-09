@@ -42,12 +42,12 @@ def open_dashboard():
     message.pack(pady=10)
 
 def toggle_on():
-    requests.get(NODEMCU_IP + "/ON")
+    requests.get(NODEMCU_IP + "/on")
     message.config(text="Lamp is ON", fg="green")
     print("ON button clicked")
 
 def toggle_off():
-    requests.get(NODEMCU_IP + "/OFF")
+    requests.get(NODEMCU_IP + "/off")
     message.config(text="Lamp is OFF", fg="red")
     print("OFF button clicked")
 
