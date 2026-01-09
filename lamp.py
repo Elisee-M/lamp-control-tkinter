@@ -47,6 +47,7 @@ def toggle_on():
     print("ON button clicked")
 
 def toggle_off():
+    requests.get(NODEMCU_IP + "/OFF")
     message.config(text="Lamp is OFF", fg="red")
     print("OFF button clicked")
 
